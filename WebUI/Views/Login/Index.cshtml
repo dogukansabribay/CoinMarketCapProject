@@ -1,0 +1,49 @@
+﻿@model Entities.Concrete.User
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+    Layout = "";
+
+}
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<link href="~/lib/bootstrap/dist/css/Login.css" rel="stylesheet" />
+<div class="login">
+
+    <h4>@ViewBag.IncorrectLogin</h4>
+    <div class="row">
+        <h2 class="active"> sign in </h2>
+        <h2 class="active"><button asp-action="SignUp" asp-controller="Login"> SIGN UP </button></h2>
+    </div>
+
+
+    <form asp-action="Index" asp-controller="Login" method="post">
+
+        <input type="text" class="text" name="userName">
+        <span>username</span>
+
+        <br>
+
+        <br>
+
+        <input type="password" class="text" name="password">
+        <span>password</span>
+        <br>
+
+
+        <input class="signin" value="Sign In" type="submit" />
+
+        <hr /><br />
+
+
+
+
+
+
+        <hr>
+
+        <a href="#">Forgot Password?</a>
+    </form>
+
+</div>
